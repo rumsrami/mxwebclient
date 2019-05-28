@@ -1,0 +1,42 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - kms
+      - decrypt
+      - --location=global
+      - --keyring=portfolio27031987
+      - --key=authservice
+      - --ciphertext-file=./assets/env/prod.enc.yaml
+      - --plaintext-file=./assets/env/prod.yaml
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - kms
+      - decrypt
+      - --location=global
+      - --keyring=portfolio27031987
+      - --key=authservice
+      - --ciphertext-file=./assets/certs/prod.server.enc.crt
+      - --plaintext-file=./assets/certs/prod.server.crt
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - kms
+      - decrypt
+      - --location=global
+      - --keyring=portfolio27031987
+      - --key=authservice
+      - --ciphertext-file=./assets/certs/prod.server.enc.key
+      - --plaintext-file=./assets/certs/prod.server.key
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/mx-webclient', '.' ]
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'compute', 'instance-groups', 'managed',  'rolling-action', 'restart', 'mx-webclient-ssl-group', '--region=us-east1' ]
+
+    - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'compute', 'instance-groups', 'managed',  'rolling-action', 'restart', 'mx-webclient-ssl-db-group', '--region=us-east4' ]
+
+images:
+- 'gcr.io/$PROJECT_ID/mx-webclient'

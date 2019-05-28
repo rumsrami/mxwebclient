@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 21px;
+}
+
+@media (max-width: 767px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+
+body {
+	font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+	font-size: 1rem;
+	line-height: 1.58;
+	letter-spacing: -0.003em;
+	text-rendering: optimizeLegibility;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+header {
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+header small {
+	display: block;
+	font-family: "Lato";
+	font-weight: 300;
+	margin-top: .25em;
+}
+
+footer {
+	padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato";
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.04;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.15;
+	margin: 1.25em 0 .75em 0;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.22;
+	margin: 1.25em 0 .75em 0;
+}
+
+h4 {
+	margin: 1.50em 0 -.25em 0;
+}
+
+p { 
+	margin: 1em 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+article {
+	width: 100%;
+	max-width: 740px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+
+pre {
+	font-family: Menlo, monospace;
+	font-size: .75rem;
+	background: #ffd;
+	color: black;
+	padding: 1em;
+	margin: 2em 0;
+	overflow-x: auto;
+}
+
+code {
+	font-family: Menlo, monospace;
+	font-size: .75em;
+	color: black;
+	background: #ffd;
+	padding: 0 .125em;
+}
+
+blockquote {
+	font-family: "Lato";
+	font-style: italic;
+	font-weight: 300;
+	font-size: 1.25rem;
+}
+
+blockquote p {
+	-webkit-font-smoothing: auto;
+}
+
+a {
+	color: #00b;
+	text-decoration: none;
+}
+
+	a.pdf {
+		font-weight: 400;
+	}
+
+	a code {
+		text-decoration: underline;
+	}
+
+hr {
+	border: 0;
+	text-align: center;
+}
+
+hr::before {
+	color: #333;
+	content: '···';
+	letter-spacing: 1em;
+}
+
+
+/* HOME */
+
+.content-item {
+	margin-bottom: 1em;
+}
+
+.content-item__title {
+    margin-bottom: -.125em;
+}
+
+    .content-item__title a {
+        color: #000;
+    }
+
+.content-item__date {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: .75em;
+}
+
+.content-item__description {
+    font-family: "Lato";
+    font-weight: 300;
+    font-style: italic;
+    font-size: .75em;
+}
