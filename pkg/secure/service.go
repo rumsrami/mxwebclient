@@ -57,7 +57,6 @@ func (c Cookie) Validate(name string, encodedValue string, input map[string]stri
 	if err != nil {
 		return false, fmt.Errorf("Cannot read cookie encoded value: %v", err)
 	}
-	fmt.Printf("decrypted cookie: %v\n", cookieValue)
 	if input == nil || cookieValue == nil || input["payload"] != cookieValue["payload"] {
 		return false, fmt.Errorf("Input doesn't match cookie value")
 	}
