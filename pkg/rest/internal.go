@@ -5,10 +5,15 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-
+	
+	//"github.com/gorilla/schema"
 	"github.com/gorilla/mux"
 	"github.com/rumsrami/mxwebclient/pkg/config"
 )
+// 
+type linkedinToken struct {
+
+}
 
 // getTLSServer returns an http server configured with TLS
 func getTLSServer(env string, port string, r *mux.Router) (*http.Server, error) {
@@ -44,4 +49,16 @@ func readConfig(env string) (*config.Configuration, error) {
 		return nil, fmt.Errorf("Error obtaining config, %v", err)
 	}
 	return &cfg, nil
+}
+
+// func parseForm parses the posted form to a go struct
+func parseQueryParameters(r *http.Request) (map[string][]string, error) {
+	if err := r.ParseForm(); err != nil {
+		return nil, fmt.Errorf("Cannot parse Form, %v", err)
+	}
+	var output map[string][]string
+	for key, value := range r.Form {
+		output[key] = value
+	}
+	return output, nil
 }
