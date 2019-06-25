@@ -23,12 +23,12 @@
 1. Learn how oauth2 works with different providers and Go.
 2. Learn how to integrate the below technologies in one unit.
 
-* Docker multistage builds, scratch images with Go binaries.
+* Docker multistage builds, Go binaries in Scratch images.
 * TLS communication between client and oauth2 provider.
-* Google Cloud Build
+* Google Key management service
 * Google Container Registry
 * Google Compute Engine
-* CI/CD with Github, Docker, Cloud.yaml
+* CI/CD with Github, Docker, Google Cloud Build
 * Encryption with Google Keys
 
 ## License
