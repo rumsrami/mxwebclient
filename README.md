@@ -4,9 +4,9 @@
 
 > Work in progress - Simple web-client for communication with gRPC authentication microservice written in Go.
 
-- **<a href="dev.rami.im/mxweb/index/" target="_blank">Web Client</a>**
+- **<a href="https://dev.rami.im/mxweb/index/" target="_blank">Web Client</a>**
 
-- **<a href="github.com/rumsrami/grpc-token-service" target="_blank">gRPC Service</a>**
+- **<a href="https://github.com/rumsrami/grpc-token-service" target="_blank">gRPC Service</a>**
 
 ## How it works
 
@@ -18,7 +18,7 @@
 6. Client uses new token to communicate with other services
 
 ## Objectives
-1. Experimenting with <a href="www.goodreads.com/book/show/3735293-clean-code" target="_blank">Clean Code</a> approach
+1. Experimenting with <a href="https://www.goodreads.com/book/show/3735293-clean-code" target="_blank">Clean Code</a> approach
 2. Learn how oauth2 works with different providers and Go.
 3. Learn how to integrate the below technologies in one unit.
 
