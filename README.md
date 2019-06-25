@@ -1,12 +1,14 @@
-<img src="./screenshots/1.png" width=200px display="block" >
+<img src="./screenshots/1.png" width=200px display="block" target="_blank">
 
 # Authentication  Web Client
 
 > Work in progress - Simple web-client for communication with gRPC authentication microservice written in Go.
 
-- **[Web Client](https://dev.rami.im/mxweb/index/)**
+- **<a href="https://dev.rami.im/mxweb/index/)**
+" target="_blank">Web Client</a>**
 
-- **[gRPC Service](https://github.com/rumsrami/grpc-token-service)**
+- **<a href="https://github.com/rumsrami/grpc-token-service)**
+" target="_blank">gRPC Service</a>**
 
 ## How it works
 
@@ -21,13 +23,13 @@
 1. Learn how oauth2 works with different providers and Go.
 2. Learn how to integrate the below technologies in one unit.
 
-> * Docker multistage builds, scratch images with Go binaries.
-> * TLS communication between client and oauth2 provider.
-> * Google Cloud Build
-> * Google Container Registry
-> * Google Compute Engine
-> * CI/CD with Github, Docker, Cloud.yaml
-> * Encryption with Google Keys
+* Docker multistage builds, scratch images with Go binaries.
+* TLS communication between client and oauth2 provider.
+* Google Cloud Build
+* Google Container Registry
+* Google Compute Engine
+* CI/CD with Github, Docker, Cloud.yaml
+* Encryption with Google Keys
 
 ## License
 
