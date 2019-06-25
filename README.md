@@ -4,11 +4,9 @@
 
 > Work in progress - Simple web-client for communication with gRPC authentication microservice written in Go.
 
-- **<a href="https://dev.rami.im/mxweb/index/)**
-" target="_blank">Web Client</a>**
+- **<a href="https://dev.rami.im/mxweb/index/" target="_blank">Web Client</a>**
 
-- **<a href="https://github.com/rumsrami/grpc-token-service)**
-" target="_blank">gRPC Service</a>**
+- **<a href="https://github.com/rumsrami/grpc-token-service" target="_blank">gRPC Service</a>**
 
 ## How it works
 
