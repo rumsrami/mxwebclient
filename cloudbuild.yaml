@@ -35,8 +35,8 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [ 'compute', 'instance-groups', 'managed',  'rolling-action', 'restart', 'mx-webclient-ssl-group', '--region=us-east1' ]
 
-    # - name: 'gcr.io/cloud-builders/gcloud'
-    # args: [ 'compute', 'instance-groups', 'managed',  'rolling-action', 'restart', 'mx-webclient-ssl-db-group', '--region=us-east4' ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+  args: [ 'compute', 'instance-groups', 'managed',  'rolling-action', 'restart', 'mx-webclient-ssl-db-group', '--region=us-east4' ]
 
 images:
 - 'gcr.io/$PROJECT_ID/mx-webclient'
