@@ -16,6 +16,6 @@ func (s *HTTPServer) Routes() {
 	CSRF := csrf.Protect(b)
 	s.r.Use(CSRF)
 	s.r.PathPrefix("/index/").Handler(s.handleIndex())
-	s.r.Handle("/oauth2/linkedin/connect", s.HandleConnect())
-	s.r.HandleFunc("/oauth2/linkedin/callback", s.HandleCallback())
+	s.r.Handle("/mxweb/oauth2/linkedin/connect", s.HandleConnect())
+	s.r.HandleFunc("/mxweb/oauth2/linkedin/callback", s.HandleCallback())
 }
